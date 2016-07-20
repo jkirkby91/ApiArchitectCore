@@ -1,5 +1,5 @@
 {
-  "name": "ThePHPAvengers/Laravel-Package-Skeleton",
+  "name": "thephpavengers/apiarchitect-core",
   "type": "library",
   "description": "A php PSR-2/4 compliant skeleton package, pre-configured with phpunit + coverage/Scrutinizer",
   "keywords": [ "php","package","psr-2","psr-4","skeleton","package skeleton","phpunit" ],
@@ -10,8 +10,20 @@
   ],
   "require": {
     "php": ">=5.5.0",
-    "vlucas/phpdotenv": "~2.2",
-    "illuminate/support": "~5.0"
+    "illuminate/support": "~5.0",
+    "dingo/api": "1.0.*@dev",
+    "tymon/jwt-auth": "0.5.9",
+    "laravel/socialite": "^2.0",
+    "laravel-doctrine/orm": "1.0.*",
+    "laravel-doctrine/acl": "1.0.*",
+    "laravel-doctrine/fluent": "^1.1",
+    "barryvdh/laravel-cors": "^0.7.1",
+    "gedmo/doctrine-extensions": "^2.4",
+    "beberlei/DoctrineExtensions": "^1.0",
+    "kozz/laravel-doctrine-cache": "^1.0",
+    "laravel-doctrine/migrations": "1.0.*",
+    "lucadegasperi/oauth2-server-laravel": "5.1.*",
+    "predis/predis": "^1.1"
   },
   "require-dev": {
     "raveren/kint": "^1.0",
@@ -31,8 +43,14 @@
   },
   "autoload": {
     "psr-4": {
-      "ThePHPAvengers\\Package\\": [
-        "src/Package",
+      "ThePHPAvengers\\ApiArchitect\\Core\\": [
+        "src"
+      ]
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ThePHPAvengers\\ApiArchitect\\Core\\": [
         "tests"
       ]
     }

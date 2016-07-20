@@ -1,16 +1,20 @@
 {
-  "name": "AUTHOR/PACKAGE-NAME",
+  "name": "thephpavengers/apiarchitect-core",
   "type": "library",
-  "description": "",
-  "keywords": [ "" ],
-  "homepage": "",
+  "description": "A php PSR-2/4 compliant skeleton package, pre-configured with phpunit + coverage/Scrutinizer",
+  "keywords": [ "php","package","psr-2","psr-4","skeleton","package skeleton","phpunit" ],
+  "homepage": "https://github.com/jkirkby91/package-skeleton",
   "license": "MIT",
   "authors": [
-    { "name": "", "email": "" }
+    { "name": "James Kirkby", "email": "jkirkby91@gmail.com" }
   ],
   "require": {
     "php": ">=5.5.0",
-    "vlucas/phpdotenv": "~2.2"
+    "vlucas/phpdotenv": "~2.2",
+    "illuminate/support": "~5.0",
+    "the-php-avengers/ApiArchitect/Log": "0.1.*",
+    "the-php-avengers/ApiArchitect/Auth": "0.1.*",
+    "the-php-avengers/LaravelUUID": "0.1.*"
   },
   "require-dev": {
     "raveren/kint": "^1.0",
@@ -30,8 +34,8 @@
   },
   "autoload": {
     "psr-4": {
-      "AppNameSpace\\": [
-        "src",
+      "ThePHPAvengers\\Package\\": [
+        "src/Package",
         "tests"
       ]
     }
